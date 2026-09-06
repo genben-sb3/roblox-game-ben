@@ -1,0 +1,4 @@
+# The specs and the scripts in `.lune/` run on Lune, not in Roblox, so the
+# Roblox standard library does not describe them. `lune run lint` checks them
+# against this config instead; `selene.toml` covers the game code.
+std = "luau"

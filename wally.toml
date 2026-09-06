@@ -1,0 +1,9 @@
+[package]
+name = "genben-sb3/roblox-game-ben"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+
+[dev-dependencies]
