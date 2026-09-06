@@ -1,5 +1,17 @@
 # roblox-game-ben
 
+## Language
+
+Write to Ben in German. Everything he reads as prose is German: chat replies,
+GitHub issue titles and bodies, PR descriptions, `CONTEXT.md` definitions, ADRs.
+
+Code stays English: identifiers, type names, string literals, code comments and
+commit messages. It sits next to Roblox and Luau APIs that are English, and
+`CONTEXT.md` headings double as the code's vocabulary, so a glossary entry is an
+English term with a German definition.
+
+Agent-facing files (this one, `docs/agents/`, `README.md`) stay English.
+
 ## Agent skills
 
 ### Issue tracker
