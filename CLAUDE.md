@@ -12,6 +12,19 @@ English term with a German definition.
 
 Agent-facing files (this one, `docs/agents/`, `README.md`) stay English.
 
+## Git
+
+The agent owns `main`. There is no rule against writing to it, and no waiting on
+Ben to merge.
+
+Work on a short-lived branch with one PR per slice, then squash-merge it
+yourself once the slice is confirmed working. Still open the PR and say what it
+contains: the PR is the record, the merge is bookkeeping. Commit straight to
+`main` when there is nothing to review — docs, `CONTEXT.md`, ADRs, typo fixes.
+
+Anything that has to be seen running in Studio is confirmed by Ben, not by the
+agent. That is a limit on what "confirmed working" means, not on who merges.
+
 ## Agent skills
 
 ### Issue tracker
