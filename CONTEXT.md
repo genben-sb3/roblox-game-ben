@@ -11,23 +11,25 @@ Erklärung dazu ist auf Deutsch.
 ### Duell
 
 **Duel**:
-Ein Kampf zwischen genau zwei Spielern. Er läuft so lange, bis die HP eines
-Spielers auf null sind.
+Ein Kampf zwischen genau zwei Spielern, der läuft, bis die HP eines Spielers auf
+null sind. Er läuft von Anfang bis Ende in einer durchgehenden Animation — frei
+bewegt man sich nur in der Welt, nie im Duel (ADR 0003).
 _Avoid_: Fight, Battle, Match
 
 **Exchange**:
 Der kleinste Takt eines Duels: ein Spieler setzt eine Ability ein, der andere
-antwortet darauf. Ein Duel besteht aus vielen Exchanges hintereinander.
+antwortet darauf. Ein Duel ist eine ununterbrochene Kette von Exchanges.
 _Avoid_: Turn, Round, Zug
 
 **Initiative**:
-Wer im laufenden Exchange angreift. Sie wechselt zum Verteidiger, sobald der
+Wer im laufenden Duel angreift. Sie wechselt zum Verteidiger, sobald der
 richtig geantwortet hat — dann greift er an und der andere muss antworten.
 _Avoid_: Turn, am Zug sein
 
 **Commit Window**:
-Die Zeitspanne in Slow Motion, in der der Verteidiger seine Answer wählen muss.
-Läuft sie ab, ohne dass er etwas wählt, hat er den Exchange verloren.
+Die Zeitspanne in Slow Motion, in der der Verteidiger wählen muss — eine Answer,
+einen Truce oder eine Flight. Läuft sie ab, ohne dass er etwas wählt, hat er den
+Exchange verloren.
 _Avoid_: Countdown, Timer, Reaktionszeit
 
 **Answer**:
@@ -49,9 +51,10 @@ Commit Window, und wer ihn danebensetzt, nimmt doppelten Schaden.
 _Avoid_: Riposte, Gegenangriff, Counterattack
 
 **Truce**:
-Ein Angebot aus dem eigenen Satchel, das ein Duel sofort beendet, wenn der
-andere es annimmt. Jeder Spieler darf pro Duel genau einmal eines machen; ein
-abgelehntes Angebot verrät, wie verzweifelt der Anbietende ist.
+Ein Angebot aus Items und Recipes, das ein Duel sofort beendet, wenn der andere
+es annimmt. Du wählst es im Commit Window anstelle einer Answer und kassierst
+dafür den eingehenden Treffer. Jeder Spieler darf pro Duel genau eines machen;
+ein abgelehntes Angebot verrät, wie verzweifelt der Anbietende ist.
 _Avoid_: Peace, Deal, Frieden, Waffenstillstand
 
 ### Sammeln und Mischen
@@ -74,35 +77,44 @@ _Avoid_: Move, Skill, Spell, Fähigkeit
 **Habit**:
 Was die Pflanze hinter einer Ability tut — Vine, Thorn, Spore, Root, Bloom.
 Der Habit ist das Einzige, was im Duel mechanisch zählt: er entscheidet, welche
-Answer gegen die Ability passt. Zwei Abilities mit demselben Habit sind im Kampf
-austauschbar und unterscheiden sich nur im Aussehen. (Der Begriff ist der
-botanische Fachausdruck für die Wuchsform einer Pflanze.)
+Answer gegen die Ability passt. Die fünf stehen in einem Ring, in dem jeder von
+genau zwei anderen beantwortet wird (ADR 0002). Zwei Abilities mit demselben
+Habit sind im Kampf austauschbar und unterscheiden sich nur im Aussehen. (Der
+Begriff ist der botanische Fachausdruck für die Wuchsform einer Pflanze.)
 _Avoid_: Element, Type, Verb, Behaviour
 
 **Recipe**:
-Ein Paar von Plants und die Ability, die daraus entsteht. Jedes Paar ergibt eine
+Ein Paar von Plants und die Ability, die daraus entsteht. Die Reihenfolge zählt
+nicht, und dieselbe Plant zweimal ist ein gültiges Paar. Jedes Paar ergibt eine
 Ability — es gibt keine Fehlmischung. Seltene Rezepte sind nicht stärker, sie
-sehen besser aus.
+sehen besser aus. Ein Recipe ist das Einzige, was du weggeben kannst, ohne es zu
+verlieren — deshalb taugt es als Einsatz in einem Truce.
 _Avoid_: Formula, Combo, Mix
 
 ### Welt
 
 **Loadout**:
 Die Abilities, die du in ein Duel mitnimmst. Es sind immer weniger, als es
-Habits gibt, du hast also eine selbst gewählte Lücke — auf einen Habit hast du
-keine Answer. Das gilt für jeden Spieler auf jeder Stufe: findet der Gegner
-deine Lücke, ist das Duel vorbei.
+Habits gibt, du lässt also eine selbst gewählte Lücke — gegen mindestens einen
+Habit hast du nur die halbe Answer oder gar keine. Das gilt für jeden Spieler
+auf jeder Stufe.
 _Avoid_: Deck, Build, Set, Slots
 
 **Satchel**:
 Was du dabei hast und noch nicht nach Hause gebracht hast. Der Inhalt ist das
-Einzige, was du in einem Duel verlieren kannst.
+Einzige, was du in einem Duel unfreiwillig verlieren kannst.
 _Avoid_: Inventory, Bag, Rucksack
 
 **Loot**:
-Was aus einem Satchel auf den Boden fällt, wenn du ein Duel verlierst oder
-fliehst. Wer es zuerst aufhebt, bekommt es.
+Was aus einem Satchel auf den Boden fällt, wenn du ein Duel verlierst. Wer es
+zuerst aufhebt, bekommt es.
 _Avoid_: Drop, Beute
+
+**Flight**:
+Der Ausstieg aus einem laufenden Duel. Du wählst ihn im Commit Window anstelle
+einer Answer und kassierst dafür den eingehenden Treffer; überlebst du ihn, bist
+du mit deinem Satchel draussen.
+_Avoid_: Flee, Escape, Surrender, Aufgeben
 
 **Power**:
 Eine einzelne Zahl, die aus deinen Crystal-Stufen, der Anzahl deiner Habits und
