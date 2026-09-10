@@ -18,3 +18,6 @@ roblox.yml
 
 # Open Cloud credentials, written by scripts/setup-open-cloud.sh. Never commit.
 .env
+
+# Build inputs the upload step writes before sending them to Roblox.
+/build

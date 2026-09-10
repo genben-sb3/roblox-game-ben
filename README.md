@@ -56,6 +56,7 @@ in the dashboard.
 | `lune run test` | Runs every `*.spec.luau` under `src/`. No Studio needed. |
 | `lune run lint` | Formats with StyLua, lints with selene. |
 | `lune run lint -- --check` | The same checks, but fails instead of rewriting. |
+| `lune run spike-animation` | Builds the arm-raise clip, uploads it as an Animation asset, writes `src/shared/AnimationIds.luau`. Add `-- --dry-run` to build without uploading. |
 | `rojo serve --address 0.0.0.0` | Serves the project to Studio over the LAN. |
 | `rojo build --output game.rbxl` | Builds a place file without Studio. |
 
@@ -70,7 +71,9 @@ in the dashboard.
 3. In Studio, open the Rojo plugin, set the address to the claudebox IP and
    port `34872`, and click **Connect**. The serve API is unauthenticated, so
    anyone on the home network can read and change the source while it runs.
-4. Press **Play**. The Output window shows the matchup triangle.
+4. Press **Play**. The Output window shows the matchup triangle, and — while
+   the animation spike from issue #7 is in the tree — a few `[AnimationSpike]`
+   lines saying whether the uploaded clip reached the character.
 
 ## Writing a test
 
