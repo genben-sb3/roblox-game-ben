@@ -27,6 +27,28 @@ wally install    # third-party packages, into Packages/
 after any change to `wally.toml`. `Packages/` is generated and gitignored;
 `wally.lock` is committed so both machines resolve identical versions.
 
+## Open Cloud credentials
+
+Uploading assets and publishing the place from claudebox needs an Open Cloud API
+key. Only Ben can create one, so it lives behind a wizard. **Run it on claudebox**,
+not on the Windows PC: the `.env` it writes has to sit next to the code that
+uploads. claudebox is headless, so the wizard prints each URL for you to open in
+your own browser instead of launching one.
+
+```sh
+./scripts/setup-open-cloud.sh
+```
+
+It walks through the Creator Dashboard stage by stage, opens each page, and
+writes what it captures into `.env` (gitignored, never committed):
+`ROBLOX_CREATOR_ID`, `ROBLOX_CREATOR_TYPE`, `ROBLOX_UNIVERSE_ID`,
+`ROBLOX_PLACE_ID`, `ROBLOX_API_KEY`. Re-running it keeps existing values on
+Enter, so it is also the way to rotate an expired key.
+
+The key is pinned to claudebox's public IP. If that IP changes, uploads start
+failing with HTTP 403 and the fix is to update the allowlist on the existing key
+in the dashboard.
+
 ## Commands
 
 | Command | What it does |
