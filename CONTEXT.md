@@ -26,6 +26,12 @@ Wer im laufenden Duel angreift. Sie wechselt zum Verteidiger, sobald der
 richtig geantwortet hat — dann greift er an und der andere muss antworten.
 _Avoid_: Turn, am Zug sein
 
+**Attack**:
+Die Ability, die der Angreifer in einem Exchange einsetzt. Für das Duel zählt an
+ihr nur der Habit — er entscheidet, welche zwei Answers passen. Jeder Exchange
+beginnt mit genau einer.
+_Avoid_: Angriff, Strike, Offense, Move
+
 **Commit Window**:
 Die Zeitspanne in Slow Motion, in der der Verteidiger wählen muss — eine Answer,
 einen Truce oder eine Flight. Läuft sie ab, ohne dass er etwas wählt, hat er den
@@ -35,7 +41,7 @@ _Avoid_: Countdown, Timer, Reaktionszeit
 **Answer**:
 Die Ability, die der Verteidiger gegen die eingehende Ability spielt. Ob sie
 passt, entscheidet den Exchange — und zwar allein. Wie viel HP der verlorene
-Exchange kostet, ist eine getrennte Frage. Jede Attacke hat zwei gültige
+Exchange kostet, ist eine getrennte Frage. Jede Attack hat zwei gültige
 Answers: eine Defense und einen Counter.
 _Avoid_: Response, Konter
 

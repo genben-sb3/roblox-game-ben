@@ -11,9 +11,10 @@
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Matchup = require(ReplicatedStorage.Shared.Matchup)
+local HabitRing = require(ReplicatedStorage.Shared.HabitRing)
 
-print("[Matchup] The triangle:")
-for _, move in Matchup.MOVES do
-	print(`[Matchup]   {move} is beaten by {Matchup.counterTo(move)}`)
+print("[HabitRing] Every attack and its two answers:")
+for _, attack in HabitRing.RING do
+	local defense, counter = HabitRing.defenseTo(attack), HabitRing.counterTo(attack)
+	print(`[HabitRing]   {attack} is defended by {defense} and countered by {counter}`)
 end

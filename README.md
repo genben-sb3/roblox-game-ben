@@ -71,7 +71,7 @@ in the dashboard.
 3. In Studio, open the Rojo plugin, set the address to the claudebox IP and
    port `34872`, and click **Connect**. The serve API is unauthenticated, so
    anyone on the home network can read and change the source while it runs.
-4. Press **Play**. The Output window shows the matchup triangle.
+4. Press **Play**. The Output window shows the habit ring.
 
 ## Writing a test
 
@@ -79,11 +79,11 @@ A spec is a table of names to functions. A test fails by throwing, which is
 what `assert(condition, message)` does.
 
 ```lua
-local Matchup = require("./Matchup")
+local HabitRing = require("./HabitRing")
 
 return {
-	["defense beats attack"] = function()
-		assert(Matchup.beats("Defense", "Attack"), "Defense should beat Attack")
+	["thorn defends against vine"] = function()
+		assert(HabitRing.defenseTo("Vine") == "Thorn", "Vine should be defended by Thorn")
 	end,
 }
 ```

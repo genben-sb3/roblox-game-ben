@@ -7,8 +7,8 @@
 	`assert(condition, message)` does.
 
 		return {
-			["defense beats attack"] = function()
-				assert(Matchup.beats("Defense", "Attack"), "Defense should beat Attack")
+			["thorn defends against vine"] = function()
+				assert(HabitRing.defenseTo("Vine") == "Thorn", "Vine should be defended by Thorn")
 			end,
 		}
 
