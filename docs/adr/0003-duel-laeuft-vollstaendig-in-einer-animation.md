@@ -33,8 +33,6 @@ erste Angriff ist die Verpflichtung.
   anstelle einer Answer. Wer eines von beidem wählt, hat nicht geantwortet und
   kassiert den eingehenden Treffer — der Preis steckt damit in der Mechanik
   statt in einer Extraregel.
-- Ein Duel braucht viele Animationen. Wie sie entstehen, ist noch offen: laut
-  `docs/research/roblox-animation-without-studio.md` lassen sie sich zwar ohne
-  Studio hochladen, aber nicht ohne Studio abspielen, solange sie nur im
-  Rojo-Baum liegen. Ein Spike klärt als Nächstes, ob der Agent Clips selber
-  erzeugen kann oder ob Ben die Basis-Clips im Animation Editor baut.
+- Ein Duel braucht viele Animationen. Wie sie entstehen, ist entschieden: der
+  Agent erzeugt sie selber, lädt sie über Open Cloud hoch und Ben baut keine
+  Clips (ADR 0005). Der Spike aus Issue #7 hat das belegt.
